@@ -1,0 +1,1463 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRINTCARE SOLUTIONS | Printer, Photocopier & Office Equipment Repairs Abuja</title>
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Professional repair, maintenance, installation and consumables for printers, photocopiers, D.I. machines and computers in Abuja, Nigeria.">
+    <meta name="keywords" content="Printer repair Abuja, Photocopier repair Abuja, D.I. machine repair Abuja, Printer consumables Abuja, Toner supplier Garki, Computer installation Abuja">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f0fdfa',
+                            100: '#ccfbf1',
+                            500: '#14b8a6',
+                            600: '#0d9488',
+                            700: '#0f766e',
+                            800: '#115e59',
+                            900: '#134e4a',
+                            dark: '#0f172a'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Google Fonts & FontAwesome Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(226, 232, 240, 0.8);
+        }
+        .hero-bg {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 60%, #0d9488 100%);
+        }
+        .whatsapp-pulse {
+            box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7);
+            animation: pulse-green 2s infinite;
+        }
+        @keyframes pulse-green {
+            0% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7); }
+            70% { box-shadow: 0 0 0 12px rgba(34, 197, 94, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0); }
+        }
+        /* Hide scrollbars for slick slider horizontally */
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased flex flex-col min-h-screen">
+
+    <!-- TOP ANNOUNCEMENT BAR -->
+    <div class="bg-brand-dark text-slate-300 text-xs py-2 px-4 border-b border-slate-800">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-2">
+            <div class="flex items-center gap-4">
+                <span><i class="fa-solid font-bold fa-location-dot text-brand-500 mr-1"></i> Block C2, Suite 3, Commerce Plaza, Area 1, Garki, Abuja</span>
+                <span class="hidden md:inline">|</span>
+                <span class="hidden md:inline"><i class="fa-solid fa-clock text-brand-500 mr-1"></i> Mon - Sat: 8:00 AM - 6:00 PM</span>
+            </div>
+            <div class="flex items-center gap-4">
+                <a href="tel:08164201624" class="hover:text-white transition"><i class="fa-solid fa-phone text-brand-500 mr-1"></i> 08164201624</a>
+                <a href="tel:08127329838" class="hover:text-white transition"><i class="fa-solid fa-phone text-brand-500 mr-1"></i> 08127329838</a>
+                <button onclick="openAdminModal()" class="text-xs bg-slate-800 hover:bg-slate-700 text-slate-300 px-2 py-0.5 rounded border border-slate-700 transition ml-2">
+                    <i class="fa-solid fa-lock text-brand-500 mr-1"></i> Admin
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN STICKY NAVIGATION -->
+    <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md shadow-sm border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Brand Logo -->
+                <a href="#home" class="flex items-center gap-3">
+                    <div class="bg-brand-600 text-white p-2.5 rounded-xl shadow-md flex items-center justify-center">
+                        <i class="fa-solid fa-print text-2xl"></i>
+                    </div>
+                    <div>
+                        <span class="text-xl font-extrabold tracking-tight text-slate-900 block leading-tight">PRINTCARE</span>
+                        <span class="text-xs font-bold text-brand-600 uppercase tracking-widest block">SOLUTIONS</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation Links -->
+                <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-600">
+                    <a href="#home" class="hover:text-brand-600 transition">Home</a>
+                    <a href="#about" class="hover:text-brand-600 transition">About</a>
+                    <a href="#services" class="hover:text-brand-600 transition">Services</a>
+                    <a href="#gallery" class="hover:text-brand-600 transition">Our Work</a>
+                    <a href="#products" class="hover:text-brand-600 transition">Products</a>
+                    <a href="#contact" class="hover:text-brand-600 transition">Contact</a>
+                </nav>
+
+                <!-- Action CTA -->
+                <div class="hidden lg:flex items-center gap-3">
+                    <button onclick="openWhatsAppModal('General Inquiry', 'Hello PRINTCARE SOLUTIONS, I would like to inquire about your services.')" class="bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-sm px-4 py-2.5 rounded-xl shadow-sm transition flex items-center gap-2">
+                        <i class="fa-brands fa-whatsapp text-lg"></i> WhatsApp Us
+                    </button>
+                </div>
+
+                <!-- Mobile Menu Toggle -->
+                <button id="mobileMenuBtn" onclick="toggleMobileMenu()" class="md:hidden text-slate-700 text-2xl focus:outline-none p-2">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobileMenu" class="hidden md:hidden bg-white border-b border-slate-200 px-4 pt-2 pb-6 space-y-3">
+            <a href="#home" onclick="toggleMobileMenu()" class="block py-2 text-slate-700 font-medium hover:text-brand-600">Home</a>
+            <a href="#about" onclick="toggleMobileMenu()" class="block py-2 text-slate-700 font-medium hover:text-brand-600">About</a>
+            <a href="#services" onclick="toggleMobileMenu()" class="block py-2 text-slate-700 font-medium hover:text-brand-600">Services</a>
+            <a href="#gallery" onclick="toggleMobileMenu()" class="block py-2 text-slate-700 font-medium hover:text-brand-600">Our Work</a>
+            <a href="#products" onclick="toggleMobileMenu()" class="block py-2 text-slate-700 font-medium hover:text-brand-600">Products</a>
+            <a href="#contact" onclick="toggleMobileMenu()" class="block py-2 text-slate-700 font-medium hover:text-brand-600">Contact</a>
+            <div class="pt-2 border-t border-slate-100 flex flex-col gap-2">
+                <button onclick="openWhatsAppModal('General Inquiry', 'Hello PRINTCARE SOLUTIONS, I would like to inquire about your services.'); toggleMobileMenu();" class="w-full bg-emerald-600 text-white font-semibold py-2.5 rounded-xl flex items-center justify-center gap-2">
+                    <i class="fa-brands fa-whatsapp text-lg"></i> WhatsApp Us
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow">
+        <!-- HERO SECTION -->
+        <section id="home" class="hero-bg text-white relative overflow-hidden py-16 md:py-24">
+            <div class="absolute inset-0 bg-slate-950/20 backdrop-blur-[2px]"></div>
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                    <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                        <div class="inline-flex items-center gap-2 bg-brand-500/20 border border-brand-500/30 px-3.5 py-1.5 rounded-full text-brand-100 text-xs font-semibold tracking-wide uppercase">
+                            <i class="fa-solid fa-circle-check text-brand-500"></i> Trusted Office Equipment Specialists in Abuja
+                        </div>
+                        <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight leading-none text-white">
+                            PRINTCARE SOLUTIONS
+                        </h1>
+                        <p class="text-brand-100 font-medium text-lg md:text-xl">
+                            Printer • Photocopier • D.I. Machine • Computer Services
+                        </p>
+                        <p class="text-slate-300 text-base md:text-lg max-w-2xl leading-relaxed mx-auto lg:mx-0">
+                            Professional repair, installation, maintenance and printer consumables for homes, offices, businesses and organizations across Abuja, Nigeria.
+                        </p>
+                        <div class="pt-4 flex flex-wrap gap-4 justify-center lg:justify-start">
+                            <button onclick="openWhatsAppModal('Repair Request', 'Hello PRINTCARE SOLUTIONS, I need a repair/service. Please assist me.')" class="bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-6 py-3.5 rounded-xl shadow-lg transition flex items-center gap-2.5">
+                                <i class="fa-brands fa-whatsapp text-xl"></i> BOOK A REPAIR
+                            </button>
+                            <a href="#products" class="bg-brand-600 hover:bg-brand-500 text-white font-bold px-6 py-3.5 rounded-xl shadow-lg transition flex items-center gap-2">
+                                <i class="fa-solid fa-boxes-stacked"></i> SHOP CONSUMABLES
+                            </a>
+                            <a href="tel:08164201624" class="bg-slate-800 hover:bg-slate-700 text-white font-semibold px-5 py-3.5 rounded-xl border border-slate-700 transition flex items-center gap-2">
+                                <i class="fa-solid fa-phone text-brand-500"></i> CALL US
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Hero Quick Contact / Summary Card -->
+                    <div class="lg:col-span-5">
+                        <div class="glass-card rounded-2xl p-6 md:p-8 text-slate-800 shadow-2xl relative">
+                            <div class="absolute -top-3 -right-3 bg-brand-600 text-white text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full shadow">
+                                Area 1, Garki
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900 mb-2">Need Urgent Repairs or Supplies?</h3>
+                            <p class="text-xs text-slate-500 mb-6">Connect directly with our senior technicians for fast diagnosis or immediate dispatch of genuine parts.</p>
+                            
+                            <div class="space-y-4 text-sm">
+                                <div class="flex items-start gap-3 p-3 rounded-lg bg-slate-50 border border-slate-100">
+                                    <div class="bg-brand-100 text-brand-700 p-2 rounded-md"><i class="fa-solid fa-wrench"></i></div>
+                                    <div>
+                                        <h4 class="font-bold text-slate-900">On-site & Workshop Support</h4>
+                                        <p class="text-xs text-slate-600">Quick response diagnosis for corporate offices & institutions.</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start gap-3 p-3 rounded-lg bg-slate-50 border border-slate-100">
+                                    <div class="bg-brand-100 text-brand-700 p-2 rounded-md"><i class="fa-solid fa-box-open"></i></div>
+                                    <div>
+                                        <h4 class="font-bold text-slate-900">100% Tested Consumables</h4>
+                                        <p class="text-xs text-slate-600">Toners, drums, and blades compatible with major brands.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500 font-medium">
+                                <span><i class="fa-solid fa-shield-halved text-emerald-600"></i> Quality Service</span>
+                                <span><i class="fa-solid fa-truck-fast text-brand-600"></i> Abuja Delivery</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SERVICES SECTION -->
+        <section id="services" class="py-20 bg-slate-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span class="text-brand-600 font-extrabold uppercase text-xs tracking-widest block mb-2">What We Do</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900">Our Technical Services</h2>
+                    <p class="text-slate-600 mt-3 text-base">Comprehensive technical support, repair, and consumable supply solutions designed to keep your office operations running without interruption.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Service 1: Printer Repairs -->
+                    <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-200 hover:shadow-xl hover:-translate-y-1 transition duration-300 flex flex-col justify-between">
+                        <div>
+                            <div class="w-14 h-14 bg-brand-50 text-brand-600 rounded-2xl flex items-center justify-center text-2xl mb-6 shadow-inner">
+                                <i class="fa-solid fa-print"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900 mb-3">Printer Repairs</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                                Professional diagnosis, servicing, troubleshooting, and repair of laserjet, inkjet, thermal, and heavy-duty office printers.
+                            </p>
+                        </div>
+                        <button onclick="openWhatsAppModal('Printer Repair', 'Hello PRINTCARE SOLUTIONS, I need a repair service for my printer. Please assist me.')" class="w-full py-2.5 bg-slate-100 hover:bg-brand-600 hover:text-white text-slate-800 font-semibold rounded-xl transition text-sm flex items-center justify-center gap-2">
+                            Request Printer Repair <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </button>
+                    </div>
+
+                    <!-- Service 2: Photocopier Repairs -->
+                    <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-200 hover:shadow-xl hover:-translate-y-1 transition duration-300 flex flex-col justify-between">
+                        <div>
+                            <div class="w-14 h-14 bg-brand-50 text-brand-600 rounded-2xl flex items-center justify-center text-2xl mb-6 shadow-inner">
+                                <i class="fa-solid fa-copy"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900 mb-3">Photocopier Repairs</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                                Complete repair, component replacement, troubleshooting, and maintenance of high-volume photocopy machines for offices and print centers.
+                            </p>
+                        </div>
+                        <button onclick="openWhatsAppModal('Photocopier Repair', 'Hello PRINTCARE SOLUTIONS, I need repair/servicing for my photocopier machine.')" class="w-full py-2.5 bg-slate-100 hover:bg-brand-600 hover:text-white text-slate-800 font-semibold rounded-xl transition text-sm flex items-center justify-center gap-2">
+                            Request Photocopier Repair <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </button>
+                    </div>
+
+                    <!-- Service 3: D.I. Machine Repairs -->
+                    <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-200 hover:shadow-xl hover:-translate-y-1 transition duration-300 flex flex-col justify-between">
+                        <div>
+                            <div class="w-14 h-14 bg-brand-50 text-brand-600 rounded-2xl flex items-center justify-center text-2xl mb-6 shadow-inner">
+                                <i class="fa-solid fa-gears"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900 mb-3">D.I. Machine Repairs</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                                Specialized repair, recalibration, and mechanical maintenance services for Direct Imaging (D.I.) printing presses and digital equipment.
+                            </p>
+                        </div>
+                        <button onclick="openWhatsAppModal('D.I. Machine Repair', 'Hello PRINTCARE SOLUTIONS, I need repair/maintenance for my D.I. machine.')" class="w-full py-2.5 bg-slate-100 hover:bg-brand-600 hover:text-white text-slate-800 font-semibold rounded-xl transition text-sm flex items-center justify-center gap-2">
+                            Request D.I. Repair <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </button>
+                    </div>
+
+                    <!-- Service 4: Computer Installation -->
+                    <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-200 hover:shadow-xl hover:-translate-y-1 transition duration-300 flex flex-col justify-between">
+                        <div>
+                            <div class="w-14 h-14 bg-brand-50 text-brand-600 rounded-2xl flex items-center justify-center text-2xl mb-6 shadow-inner">
+                                <i class="fa-solid fa-desktop"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900 mb-3">Computer Installation</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                                Computer workstation setup, OS installation, network printer configuration, software driver installation, and IT technical support.
+                            </p>
+                        </div>
+                        <button onclick="openWhatsAppModal('Computer Setup', 'Hello PRINTCARE SOLUTIONS, I need computer setup/installation support.')" class="w-full py-2.5 bg-slate-100 hover:bg-brand-600 hover:text-white text-slate-800 font-semibold rounded-xl transition text-sm flex items-center justify-center gap-2">
+                            Request Computer Setup <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </button>
+                    </div>
+
+                    <!-- Service 5: General Maintenance -->
+                    <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-200 hover:shadow-xl hover:-translate-y-1 transition duration-300 flex flex-col justify-between">
+                        <div>
+                            <div class="w-14 h-14 bg-brand-50 text-brand-600 rounded-2xl flex items-center justify-center text-2xl mb-6 shadow-inner">
+                                <i class="fa-solid fa-screwdriver-wrench"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900 mb-3">General Maintenance</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                                Scheduled preventive routine maintenance and deep servicing engineered to keep equipment performing optimally and avoid sudden downtime.
+                            </p>
+                        </div>
+                        <button onclick="openWhatsAppModal('General Maintenance', 'Hello PRINTCARE SOLUTIONS, I would like to schedule routine maintenance for our equipment.')" class="w-full py-2.5 bg-slate-100 hover:bg-brand-600 hover:text-white text-slate-800 font-semibold rounded-xl transition text-sm flex items-center justify-center gap-2">
+                            Book Maintenance <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </button>
+                    </div>
+
+                    <!-- Service 6: Consumables Contracting -->
+                    <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-200 hover:shadow-xl hover:-translate-y-1 transition duration-300 flex flex-col justify-between">
+                        <div>
+                            <div class="w-14 h-14 bg-brand-50 text-brand-600 rounded-2xl flex items-center justify-center text-2xl mb-6 shadow-inner">
+                                <i class="fa-solid fa-file-contract"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900 mb-3">Consumables Contracting</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                                Supply contract agreements for corporate offices, schools, institutions, and government facilities requiring structured recurring toner and cartridge deliveries.
+                            </p>
+                        </div>
+                        <button onclick="openWhatsAppModal('Consumables Contracting', 'Hello PRINTCARE SOLUTIONS, I would like to inquire about consumable supply contracts for our organization.')" class="w-full py-2.5 bg-slate-100 hover:bg-brand-600 hover:text-white text-slate-800 font-semibold rounded-xl transition text-sm flex items-center justify-center gap-2">
+                            Inquire Contracting <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PRODUCTS / SHOP SECTION -->
+        <section id="products" class="py-20 bg-white border-y border-slate-200">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-6">
+                    <div>
+                        <span class="text-brand-600 font-extrabold uppercase text-xs tracking-widest block mb-2">Quality Supplies</span>
+                        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900">Products & Consumables</h2>
+                        <p class="text-slate-600 mt-2 text-sm max-w-xl">Browse our inventory of high-grade toners, imaging drums, wiper blades, and replacement components. Request exact pricing and availability instantly via WhatsApp.</p>
+                    </div>
+                    <!-- Search Bar -->
+                    <div class="w-full md:w-80">
+                        <div class="relative">
+                            <i class="fa-solid fa-magnifying-glass absolute left-3.5 top-3.5 text-slate-400"></i>
+                            <input type="text" id="productSearchInput" oninput="filterProducts()" placeholder="Search toners, drums, model..." class="w-full pl-10 pr-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-brand-600 focus:bg-white transition">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Category Filters -->
+                <div class="flex items-center gap-2 overflow-x-auto pb-4 no-scrollbar mb-8">
+                    <button onclick="setCategoryFilter('all')" class="cat-btn active px-4 py-2 bg-brand-600 text-white rounded-xl text-xs font-bold whitespace-nowrap transition" data-cat="all">All Products</button>
+                    <button onclick="setCategoryFilter('Toners')" class="cat-btn px-4 py-2 bg-slate-100 text-slate-700 hover:bg-slate-200 rounded-xl text-xs font-bold whitespace-nowrap transition" data-cat="Toners">Toners</button>
+                    <button onclick="setCategoryFilter('Drums')" class="cat-btn px-4 py-2 bg-slate-100 text-slate-700 hover:bg-slate-200 rounded-xl text-xs font-bold whitespace-nowrap transition" data-cat="Drums">Drums</button>
+                    <button onclick="setCategoryFilter('Blades')" class="cat-btn px-4 py-2 bg-slate-100 text-slate-700 hover:bg-slate-200 rounded-xl text-xs font-bold whitespace-nowrap transition" data-cat="Blades">Blades</button>
+                    <button onclick="setCategoryFilter('Printer Consumables')" class="cat-btn px-4 py-2 bg-slate-100 text-slate-700 hover:bg-slate-200 rounded-xl text-xs font-bold whitespace-nowrap transition" data-cat="Printer Consumables">Printer Consumables</button>
+                    <button onclick="setCategoryFilter('Photocopier Consumables')" class="cat-btn px-4 py-2 bg-slate-100 text-slate-700 hover:bg-slate-200 rounded-xl text-xs font-bold whitespace-nowrap transition" data-cat="Photocopier Consumables">Photocopier Consumables</button>
+                    <button onclick="setCategoryFilter('Compatible Parts')" class="cat-btn px-4 py-2 bg-slate-100 text-slate-700 hover:bg-slate-200 rounded-xl text-xs font-bold whitespace-nowrap transition" data-cat="Compatible Parts">Compatible Parts</button>
+                </div>
+
+                <!-- Product Grid (NO PRICES SHOWN) -->
+                <div id="productGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                    <!-- Dynamic rendering via JS -->
+                </div>
+
+                <div id="noProductsMsg" class="hidden text-center py-16 text-slate-500">
+                    <i class="fa-solid fa-box-open text-4xl text-slate-300 mb-3 block"></i>
+                    <p class="font-semibold">No matching consumables or parts found.</p>
+                    <p class="text-xs mt-1">Try searching with a different term or contact us directly.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- REPAIR WORK GALLERY SECTION -->
+        <section id="gallery" class="py-20 bg-slate-900 text-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-12">
+                    <span class="text-brand-500 font-extrabold uppercase text-xs tracking-widest block mb-2">Verified Proof of Service</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-white">Our Repair & Maintenance Gallery</h2>
+                    <p class="text-slate-400 mt-3 text-base">Take a look at real technical repairs, drum units, D.I. machine overhauls, and computer setups performed by our senior technicians.</p>
+                </div>
+
+                <!-- Gallery Category Tabs -->
+                <div class="flex justify-center gap-2 overflow-x-auto pb-4 no-scrollbar mb-10">
+                    <button onclick="filterGallery('all')" class="gallery-cat-btn px-4 py-2 bg-brand-600 text-white rounded-full text-xs font-bold transition" data-gcat="all">All Jobs</button>
+                    <button onclick="filterGallery('Printer Repairs')" class="gallery-cat-btn px-4 py-2 bg-slate-800 text-slate-300 hover:bg-slate-700 rounded-full text-xs font-bold transition" data-gcat="Printer Repairs">Printers</button>
+                    <button onclick="filterGallery('Photocopier Service')" class="gallery-cat-btn px-4 py-2 bg-slate-800 text-slate-300 hover:bg-slate-700 rounded-full text-xs font-bold transition" data-gcat="Photocopier Service">Photocopiers</button>
+                    <button onclick="filterGallery('D.I. Machines')" class="gallery-cat-btn px-4 py-2 bg-slate-800 text-slate-300 hover:bg-slate-700 rounded-full text-xs font-bold transition" data-gcat="D.I. Machines">D.I. Machines</button>
+                    <button onclick="filterGallery('Computer Setup')" class="gallery-cat-btn px-4 py-2 bg-slate-800 text-slate-300 hover:bg-slate-700 rounded-full text-xs font-bold transition" data-gcat="Computer Setup">Computers</button>
+                </div>
+
+                <!-- Gallery Grid -->
+                <div id="galleryGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Dynamic rendering via JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- WHY CHOOSE US SECTION -->
+        <section class="py-20 bg-slate-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span class="text-brand-600 font-extrabold uppercase text-xs tracking-widest block mb-2">Why Work With Us</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900">Why Choose PRINTCARE SOLUTIONS?</h2>
+                    <p class="text-slate-600 mt-3 text-base">We prioritize speed, component authenticity, and technical accuracy to protect your corporate investment.</p>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
+                        <div class="text-brand-600 text-3xl mb-4"><i class="fa-solid fa-user-gear"></i></div>
+                        <h3 class="font-bold text-slate-900 text-base mb-2">Professional Technical Service</h3>
+                        <p class="text-xs text-slate-600 leading-relaxed">Systematic diagnostics to pin-point electronic and mechanical faults without guesswork.</p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
+                        <div class="text-brand-600 text-3xl mb-4"><i class="fa-solid fa-bolt"></i></div>
+                        <h3 class="font-bold text-slate-900 text-base mb-2">Fast Response</h3>
+                        <p class="text-xs text-slate-600 leading-relaxed">Rapid dispatch for emergency technician call-outs within Abuja offices and commerce hubs.</p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
+                        <div class="text-brand-600 text-3xl mb-4"><i class="fa-solid fa-square-check"></i></div>
+                        <h3 class="font-bold text-slate-900 text-base mb-2">Quality Repairs</h3>
+                        <p class="text-xs text-slate-600 leading-relaxed">Precision repair standards ensuring long-term durability and minimal post-service issues.</p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
+                        <div class="text-brand-600 text-3xl mb-4"><i class="fa-solid fa-box-check"></i></div>
+                        <h3 class="font-bold text-slate-900 text-base mb-2">Genuine & Compatible Consumables</h3>
+                        <p class="text-xs text-slate-600 leading-relaxed">Carefully sourced toners, drums, and wiper blades tested for optical density and longevity.</p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
+                        <div class="text-brand-600 text-3xl mb-4"><i class="fa-solid fa-calendar-check"></i></div>
+                        <h3 class="font-bold text-slate-900 text-base mb-2">Preventive Maintenance</h3>
+                        <p class="text-xs text-slate-600 leading-relaxed">Routine check-ups to prevent premature component wear and catastrophic gear failures.</p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
+                        <div class="text-brand-600 text-3xl mb-4"><i class="fa-solid fa-building flex-shrink-0"></i></div>
+                        <h3 class="font-bold text-slate-900 text-base mb-2">Business & Office Support</h3>
+                        <p class="text-xs text-slate-600 leading-relaxed">Tailored corporate service agreements and bulk consumable invoicing for institutions.</p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
+                        <div class="text-brand-600 text-3xl mb-4"><i class="fa-solid fa-id-card-clip"></i></div>
+                        <h3 class="font-bold text-slate-900 text-base mb-2">Experienced Technicians</h3>
+                        <p class="text-xs text-slate-600 leading-relaxed">Skilled specialists trained in heavy-duty commercial copiers, laser engines, and D.I. systems.</p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
+                        <div class="text-brand-600 text-3xl mb-4"><i class="fa-solid fa-smile-beam"></i></div>
+                        <h3 class="font-bold text-slate-900 text-base mb-2">Customer Satisfaction</h3>
+                        <p class="text-xs text-slate-600 leading-relaxed">Focused on clear communication, prompt updates, and transparent service standards.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- HOW IT WORKS SECTION -->
+        <section class="py-20 bg-white border-y border-slate-200">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span class="text-brand-600 font-extrabold uppercase text-xs tracking-widest block mb-2">Simple Process</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900">How It Works</h2>
+                    <p class="text-slate-600 mt-2 text-sm">Getting your printer repaired or ordering replacement toners is effortless.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-8 relative">
+                    <!-- Step 1 -->
+                    <div class="text-center relative">
+                        <div class="w-16 h-16 bg-brand-600 text-white rounded-2xl text-2xl font-black flex items-center justify-center mx-auto mb-4 shadow-lg">
+                            1
+                        </div>
+                        <h3 class="font-bold text-slate-900 text-lg mb-2">CONTACT US</h3>
+                        <p class="text-xs text-slate-600 leading-relaxed">Reach out by WhatsApp, phone call, email, or fill our online enquiry form.</p>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="text-center relative">
+                        <div class="w-16 h-16 bg-brand-600 text-white rounded-2xl text-2xl font-black flex items-center justify-center mx-auto mb-4 shadow-lg">
+                            2
+                        </div>
+                        <h3 class="font-bold text-slate-900 text-lg mb-2">TELL US THE PROBLEM</h3>
+                        <p class="text-xs text-slate-600 leading-relaxed">Explain your machine's error code or specify the model toner/blade you need.</p>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="text-center relative">
+                        <div class="w-16 h-16 bg-brand-600 text-white rounded-2xl text-2xl font-black flex items-center justify-center mx-auto mb-4 shadow-lg">
+                            3
+                        </div>
+                        <h3 class="font-bold text-slate-900 text-lg mb-2">GET SERVICE / PRODUCT</h3>
+                        <p class="text-xs text-slate-600 leading-relaxed">Our senior technician visits your site or dispatches your required consumables.</p>
+                    </div>
+
+                    <!-- Step 4 -->
+                    <div class="text-center relative">
+                        <div class="w-16 h-16 bg-brand-600 text-white rounded-2xl text-2xl font-black flex items-center justify-center mx-auto mb-4 shadow-lg">
+                            4
+                        </div>
+                        <h3 class="font-bold text-slate-900 text-lg mb-2">GET BACK TO WORK</h3>
+                        <p class="text-xs text-slate-600 leading-relaxed">Your equipment is restored to crisp printing performance without hassle.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT US SECTION -->
+        <section id="about" class="py-20 bg-slate-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="bg-white rounded-3xl p-8 md:p-12 shadow-sm border border-slate-200">
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                        <div class="lg:col-span-7 space-y-5">
+                            <span class="text-brand-600 font-extrabold uppercase text-xs tracking-widest block">About Our Company</span>
+                            <h2 class="text-3xl font-extrabold text-slate-900">Your Trusted Partner in Office Printing Excellence</h2>
+                            <p class="text-slate-700 text-base leading-relaxed">
+                                <strong>PRINTCARE SOLUTIONS</strong> is a professional technical service and office-equipment support company specializing in printer and photocopier repairs, D.I. machine repairs, computer installations, general maintenance, consumables contracting, and the supply of printer consumables such as toners, drums and blades.
+                            </p>
+                            <p class="text-slate-600 text-sm leading-relaxed">
+                                Based in Garki, Abuja, we cater to individual home offices, commercial print hubs, schools, corporate enterprises, and government agencies across the Federal Capital Territory. We focus on fast response times, trustworthy diagnostic integrity, and continuous support to eliminate unexpected hardware breakdowns.
+                            </p>
+                            <div class="pt-2 flex flex-wrap gap-6 text-sm font-semibold text-slate-800">
+                                <div class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-brand-600"></i> Corporate Contracts</div>
+                                <div class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-brand-600"></i> Abuja-Wide Delivery</div>
+                                <div class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-brand-600"></i> Expert Technicians</div>
+                            </div>
+                        </div>
+                        <div class="lg:col-span-5 bg-slate-900 text-white rounded-2xl p-8 shadow-xl">
+                            <h3 class="text-xl font-bold text-white mb-4">Contact Summary</h3>
+                            <div class="space-y-4 text-sm text-slate-300">
+                                <div class="flex items-start gap-3">
+                                    <i class="fa-solid fa-location-dot text-brand-500 mt-1"></i>
+                                    <span>Block C2, Suite 3, Commerce Plaza, Area 1, Garki, Abuja, Nigeria.</span>
+                                </div>
+                                <div class="flex items-center gap-3">
+                                    <i class="fa-solid fa-phone text-brand-500"></i>
+                                    <span>08164201624 | 08127329838</span>
+                                </div>
+                                <div class="flex items-center gap-3">
+                                    <i class="fa-solid fa-envelope text-brand-500"></i>
+                                    <span class="break-all">printcare.enquiries@gmail.com</span>
+                                </div>
+                            </div>
+                            <div class="mt-8 pt-6 border-t border-slate-800">
+                                <button onclick="openWhatsAppModal('General Contact', 'Hello PRINTCARE SOLUTIONS, I would like to make an inquiry.')" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3 rounded-xl transition flex items-center justify-center gap-2 text-sm">
+                                    <i class="fa-brands fa-whatsapp text-lg"></i> Direct WhatsApp Inquiry
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT & ENQUIRY FORM SECTION -->
+        <section id="contact" class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span class="text-brand-600 font-extrabold uppercase text-xs tracking-widest block mb-2">Get In Touch</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900">Contact Us & Request Enquiry</h2>
+                    <p class="text-slate-600 mt-2 text-sm">Have a broken photocopier or need toner supplies? Submit an enquiry or contact us directly.</p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                    <!-- Contact Information Cards -->
+                    <div class="lg:col-span-5 space-y-6">
+                        <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200">
+                            <div class="flex items-center gap-4 mb-3">
+                                <div class="w-12 h-12 bg-brand-100 text-brand-700 rounded-xl flex items-center justify-center text-xl">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-slate-900 text-base">Physical Location</h4>
+                                    <p class="text-xs text-slate-500">Visit our office / repair lab</p>
+                                </div>
+                            </div>
+                            <p class="text-sm text-slate-700 font-medium leading-relaxed">
+                                Block C2, Suite 3, Commerce Plaza,<br>Area 1, Garki, Abuja, Nigeria.
+                            </p>
+                        </div>
+
+                        <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200">
+                            <div class="flex items-center gap-4 mb-3">
+                                <div class="w-12 h-12 bg-brand-100 text-brand-700 rounded-xl flex items-center justify-center text-xl">
+                                    <i class="fa-solid fa-phone"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-slate-900 text-base">Phone & WhatsApp</h4>
+                                    <p class="text-xs text-slate-500">Call or message anytime</p>
+                                </div>
+                            </div>
+                            <div class="space-y-2 pt-1">
+                                <a href="tel:08164201624" class="block text-sm font-semibold text-brand-700 hover:underline"><i class="fa-solid fa-phone mr-2 text-xs"></i> 08164201624</a>
+                                <a href="tel:08127329838" class="block text-sm font-semibold text-brand-700 hover:underline"><i class="fa-solid fa-phone mr-2 text-xs"></i> 08127329838</a>
+                            </div>
+                        </div>
+
+                        <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200">
+                            <div class="flex items-center gap-4 mb-3">
+                                <div class="w-12 h-12 bg-brand-100 text-brand-700 rounded-xl flex items-center justify-center text-xl">
+                                    <i class="fa-solid fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-slate-900 text-base">Email Address</h4>
+                                    <p class="text-xs text-slate-500">Official inquiries & RFQs</p>
+                                </div>
+                            </div>
+                            <a href="mailto:printcare.enquiries@gmail.com" class="text-sm font-semibold text-brand-700 hover:underline break-all">
+                                printcare.enquiries@gmail.com
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Interactive Form -->
+                    <div class="lg:col-span-7 bg-slate-50 p-8 rounded-3xl border border-slate-200 shadow-sm">
+                        <h3 class="text-xl font-bold text-slate-900 mb-6">Submit Service / Product Enquiry</h3>
+                        
+                        <form id="enquiryForm" onsubmit="handleFormSubmit(event)" class="space-y-4">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-xs font-bold text-slate-700 mb-1">Full Name *</label>
+                                    <input type="text" id="formName" required placeholder="e.g. Samuel Adebayo" class="w-full px-4 py-2.5 bg-white border border-slate-300 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-brand-600">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-bold text-slate-700 mb-1">Phone Number *</label>
+                                    <input type="tel" id="formPhone" required placeholder="e.g. 08012345678" class="w-full px-4 py-2.5 bg-white border border-slate-300 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-brand-600">
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-xs font-bold text-slate-700 mb-1">Email Address</label>
+                                    <input type="email" id="formEmail" placeholder="yourname@company.com" class="w-full px-4 py-2.5 bg-white border border-slate-300 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-brand-600">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-bold text-slate-700 mb-1">Service Required *</label>
+                                    <select id="formService" required class="w-full px-4 py-2.5 bg-white border border-slate-300 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-brand-600">
+                                        <option value="Printer Repair">Printer Repair</option>
+                                        <option value="Photocopier Repair">Photocopier Repair</option>
+                                        <option value="D.I. Machine Repair">D.I. Machine Repair</option>
+                                        <option value="Computer Installation">Computer Installation</option>
+                                        <option value="General Maintenance">General Maintenance</option>
+                                        <option value="Consumables Order">Consumables / Supplies Purchase</option>
+                                        <option value="Other">Other Request</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-xs font-bold text-slate-700 mb-1">Equipment Type</label>
+                                    <input type="text" id="formEquipType" placeholder="e.g. HP LaserJet / Canon Copier" class="w-full px-4 py-2.5 bg-white border border-slate-300 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-brand-600">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-bold text-slate-700 mb-1">Equipment Model</label>
+                                    <input type="text" id="formEquipModel" placeholder="e.g. Pro M404dn / IR2520" class="w-full px-4 py-2.5 bg-white border border-slate-300 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-brand-600">
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 mb-1">Product Required (If applicable)</label>
+                                <input type="text" id="formProductReq" placeholder="e.g. HP 26A Toner, Canon Drum Unit" class="w-full px-4 py-2.5 bg-white border border-slate-300 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-brand-600">
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 mb-1">Description of Problem / Request Details *</label>
+                                <textarea id="formProblem" required rows="3" placeholder="Describe issue, error codes, paper jam location, or specific consumable count required..." class="w-full px-4 py-2.5 bg-white border border-slate-300 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-brand-600"></textarea>
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 items-center">
+                                <div>
+                                    <label class="block text-xs font-bold text-slate-700 mb-1">Preferred Contact Method</label>
+                                    <select id="formContactPref" class="w-full px-4 py-2.5 bg-white border border-slate-300 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-brand-600">
+                                        <option value="WhatsApp">WhatsApp</option>
+                                        <option value="Phone Call">Phone Call</option>
+                                        <option value="Email">Email</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-bold text-slate-700 mb-1">Upload Machine / Fault Photo</label>
+                                    <input type="file" id="formPhoto" accept="image/*" class="w-full text-xs text-slate-500 file:mr-3 file:py-2 file:px-3 file:rounded-xl file:border-0 file:text-xs file:font-semibold file:bg-brand-50 file:text-brand-700 hover:file:bg-brand-100">
+                                </div>
+                            </div>
+
+                            <button type="submit" class="w-full bg-brand-600 hover:bg-brand-700 text-white font-extrabold py-3.5 rounded-xl shadow-md transition text-sm flex items-center justify-center gap-2 mt-4">
+                                <i class="fa-solid fa-paper-plane"></i> SEND ENQUIRY
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- MAP & DIRECTIONS SECTION -->
+        <section class="py-12 bg-slate-100 border-t border-slate-200">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 flex flex-col md:flex-row items-center justify-between gap-6">
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-brand-600 text-white rounded-2xl flex items-center justify-center text-xl shadow">
+                            <i class="fa-solid fa-map-location-dot"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-extrabold text-slate-900 text-lg">PRINTCARE SOLUTIONS</h3>
+                            <p class="text-xs text-slate-600">Block C2, Suite 3, Commerce Plaza, Area 1, Garki, Abuja, Nigeria.</p>
+                        </div>
+                    </div>
+                    <a href="https://maps.google.com/?q=Commerce+Plaza+Area+1+Garki+Abuja" target="_blank" rel="noopener noreferrer" class="bg-slate-900 hover:bg-slate-800 text-white font-bold px-6 py-3 rounded-xl transition text-xs tracking-wider uppercase flex items-center gap-2 whitespace-nowrap">
+                        <i class="fa-solid fa-diamond-turn-right text-brand-500"></i> GET DIRECTIONS
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- TRUST SECTION -->
+        <section class="py-12 bg-slate-900 text-white border-t border-slate-800">
+            <div class="max-w-7xl mx-auto px-4 text-center">
+                <p class="text-xs uppercase font-extrabold tracking-widest text-brand-500 mb-2">Trusted Technical Support</p>
+                <h3 class="text-xl md:text-2xl font-bold mb-4">Contact PRINTCARE SOLUTIONS for:</h3>
+                <div class="flex flex-wrap justify-center gap-3 text-sm font-semibold text-slate-300">
+                    <span class="bg-slate-800 px-4 py-2 rounded-full border border-slate-700">Repairs</span>
+                    <span class="bg-slate-800 px-4 py-2 rounded-full border border-slate-700">Maintenance</span>
+                    <span class="bg-slate-800 px-4 py-2 rounded-full border border-slate-700">Installation</span>
+                    <span class="bg-slate-800 px-4 py-2 rounded-full border border-slate-700">Consumables</span>
+                    <span class="bg-slate-800 px-4 py-2 rounded-full border border-slate-700">Technical Support</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-950 text-slate-400 py-12 text-xs border-t border-slate-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+                <div class="md:col-span-6 space-y-3">
+                    <div class="flex items-center gap-2 text-white font-bold text-lg">
+                        <i class="fa-solid fa-print text-brand-500"></i> PRINTCARE SOLUTIONS
+                    </div>
+                    <p class="text-slate-400 leading-relaxed max-w-md">
+                        Printer & Photocopier Repairs | D.I. Machine Repairs | Computer Installation | Maintenance | Consumables
+                    </p>
+                    <p class="text-slate-400">
+                        <i class="fa-solid fa-location-dot text-brand-500 mr-1"></i> Block C2, Suite 3, Commerce Plaza, Area 1, Garki, Abuja, Nigeria.
+                    </p>
+                </div>
+
+                <div class="md:col-span-3 space-y-2">
+                    <h4 class="text-white font-bold text-sm mb-3">Quick Navigation</h4>
+                    <ul class="space-y-1.5">
+                        <li><a href="#home" class="hover:text-white transition">Home</a></li>
+                        <li><a href="#about" class="hover:text-white transition">About Us</a></li>
+                        <li><a href="#services" class="hover:text-white transition">Services</a></li>
+                        <li><a href="#gallery" class="hover:text-white transition">Our Work</a></li>
+                        <li><a href="#products" class="hover:text-white transition">Products & Consumables</a></li>
+                        <li><a href="#contact" class="hover:text-white transition">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="md:col-span-3 space-y-2">
+                    <h4 class="text-white font-bold text-sm mb-3">Direct Contact</h4>
+                    <p><i class="fa-solid fa-phone text-brand-500 mr-1"></i> 08164201624</p>
+                    <p><i class="fa-solid fa-phone text-brand-500 mr-1"></i> 08127329838</p>
+                    <p class="break-all"><i class="fa-solid fa-envelope text-brand-500 mr-1"></i> printcare.enquiries@gmail.com</p>
+                </div>
+            </div>
+
+            <div class="pt-8 border-t border-slate-900 flex flex-col md:flex-row items-center justify-between gap-4 text-slate-500">
+                <p>&copy; PRINTCARE SOLUTIONS. All Rights Reserved.</p>
+                <div class="flex items-center gap-4">
+                    <button onclick="openWhatsAppModal('General Inquiry', 'Hello PRINTCARE SOLUTIONS, I need assistance.')" class="text-emerald-500 font-semibold hover:underline">
+                        <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp
+                    </button>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- FLOATING DUAL WHATSAPP BUTTON -->
+    <div class="fixed bottom-6 right-6 z-40 flex flex-col items-end gap-3">
+        <div id="whatsappTooltip" class="bg-slate-900 text-white text-xs px-3 py-1.5 rounded-lg shadow-lg border border-slate-700 hidden sm:block">
+            Need urgent repair or toner? Chat now!
+        </div>
+        <button onclick="openWhatsAppModal('General Inquiry', 'Hello PRINTCARE SOLUTIONS, I need repair or consumable support.')" class="bg-emerald-600 hover:bg-emerald-500 text-white p-4 rounded-full shadow-2xl whatsapp-pulse flex items-center justify-center transition duration-300">
+            <i class="fa-brands fa-whatsapp text-3xl"></i>
+        </button>
+    </div>
+
+    <!-- WHATSAPP NUMBER SELECTION MODAL -->
+    <div id="whatsappModal" class="fixed inset-0 bg-slate-900/80 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-md w-full p-6 shadow-2xl relative border border-slate-200">
+            <button onclick="closeWhatsAppModal()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-700 text-xl p-2">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="text-center mb-6">
+                <div class="w-14 h-14 bg-emerald-100 text-emerald-600 rounded-2xl flex items-center justify-center text-3xl mx-auto mb-3">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </div>
+                <h3 id="waModalTitle" class="text-xl font-bold text-slate-900">Select WhatsApp Contact</h3>
+                <p class="text-xs text-slate-500 mt-1">Choose which PRINTCARE SOLUTIONS technical line you wish to message:</p>
+            </div>
+
+            <div class="space-y-3">
+                <button onclick="sendToWhatsApp('08164201624')" class="w-full p-4 bg-emerald-50 hover:bg-emerald-100 border border-emerald-200 rounded-2xl flex items-center justify-between transition group">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-emerald-600 text-white rounded-xl flex items-center justify-center font-bold">1</div>
+                        <div class="text-left">
+                            <div class="font-bold text-slate-900 text-sm">Line 1: 08164201624</div>
+                            <div class="text-xs text-emerald-700 font-medium">Main Service & Repairs</div>
+                        </div>
+                    </div>
+                    <i class="fa-solid fa-chevron-right text-emerald-600 group-hover:translate-x-1 transition"></i>
+                </button>
+
+                <button onclick="sendToWhatsApp('08127329838')" class="w-full p-4 bg-emerald-50 hover:bg-emerald-100 border border-emerald-200 rounded-2xl flex items-center justify-between transition group">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-emerald-600 text-white rounded-xl flex items-center justify-center font-bold">2</div>
+                        <div class="text-left">
+                            <div class="font-bold text-slate-900 text-sm">Line 2: 08127329838</div>
+                            <div class="text-xs text-emerald-700 font-medium">Supplies & Consumables</div>
+                        </div>
+                    </div>
+                    <i class="fa-solid fa-chevron-right text-emerald-600 group-hover:translate-x-1 transition"></i>
+                </button>
+            </div>
+
+            <div class="mt-6 text-center">
+                <p id="waModalMessagePreview" class="text-[11px] text-slate-400 bg-slate-50 p-3 rounded-xl border border-slate-100 italic"></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- GALLERY ITEM LIGHTBOX MODAL -->
+    <div id="galleryModal" class="fixed inset-0 bg-slate-950/90 backdrop-blur-md z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-slate-900 text-white rounded-3xl max-w-2xl w-full p-6 shadow-2xl relative border border-slate-800">
+            <button onclick="closeGalleryModal()" class="absolute top-4 right-4 text-slate-400 hover:text-white text-xl p-2">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            
+            <img id="lightboxImg" src="" alt="Work Gallery Preview" class="w-full h-72 object-cover rounded-2xl mb-4 border border-slate-800">
+            
+            <div class="space-y-2">
+                <div class="flex items-center justify-between">
+                    <span id="lightboxCategory" class="text-xs font-bold uppercase tracking-widest text-brand-500 bg-brand-950/50 px-3 py-1 rounded-md border border-brand-800"></span>
+                    <span id="lightboxDate" class="text-xs text-slate-400"></span>
+                </div>
+                <h3 id="lightboxTitle" class="text-xl font-bold text-white"></h3>
+                <p id="lightboxEquip" class="text-xs text-brand-300 font-medium"></p>
+                <p id="lightboxDesc" class="text-slate-300 text-sm leading-relaxed pt-2"></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ADMIN DASHBOARD MODAL -->
+    <div id="adminModal" class="fixed inset-0 bg-slate-950/80 backdrop-blur-md z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-4xl w-full max-h-[90vh] overflow-y-auto p-6 md:p-8 shadow-2xl relative border border-slate-200 text-slate-800">
+            <button onclick="closeAdminModal()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-700 text-xl p-2">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <!-- Admin Authentication -->
+            <div id="adminAuthSection" class="max-w-md mx-auto py-12 text-center space-y-4">
+                <div class="w-16 h-16 bg-brand-100 text-brand-700 rounded-2xl flex items-center justify-center text-2xl mx-auto">
+                    <i class="fa-solid fa-user-shield"></i>
+                </div>
+                <h3 class="text-2xl font-bold text-slate-900">Admin Login</h3>
+                <p class="text-xs text-slate-500">Enter access password to manage products, view customer enquiries, and update repair gallery.</p>
+                
+                <input type="password" id="adminPasswordInput" placeholder="Enter password (default: printcare123)" class="w-full px-4 py-3 bg-slate-50 border border-slate-300 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-brand-600">
+                <button onclick="verifyAdminPassword()" class="w-full bg-brand-600 hover:bg-brand-700 text-white font-bold py-3 rounded-xl transition text-sm">
+                    Unlock Admin Panel
+                </button>
+            </div>
+
+            <!-- Admin Panel Content (Hidden until authenticated) -->
+            <div id="adminPanelContent" class="hidden space-y-8">
+                <div class="flex items-center justify-between border-b border-slate-200 pb-4">
+                    <div>
+                        <h3 class="text-2xl font-extrabold text-slate-900">Business Management Dashboard</h3>
+                        <p class="text-xs text-slate-500">Add or edit products (No prices needed), manage repair gallery, and inspect customer form enquiries.</p>
+                    </div>
+                    <button onclick="logoutAdmin()" class="bg-slate-100 text-slate-700 hover:bg-slate-200 px-3 py-1.5 rounded-lg text-xs font-bold">
+                        Logout
+                    </button>
+                </div>
+
+                <!-- Admin Tabs -->
+                <div class="flex gap-2 border-b border-slate-200 pb-2">
+                    <button onclick="switchAdminTab('products')" class="admin-tab active px-4 py-2 bg-brand-600 text-white rounded-xl text-xs font-bold" data-tab="products">Products Management</button>
+                    <button onclick="switchAdminTab('gallery')" class="admin-tab px-4 py-2 bg-slate-100 text-slate-700 rounded-xl text-xs font-bold" data-tab="gallery">Repair Gallery</button>
+                    <button onclick="switchAdminTab('enquiries')" class="admin-tab px-4 py-2 bg-slate-100 text-slate-700 rounded-xl text-xs font-bold" data-tab="enquiries">Customer Enquiries Log</button>
+                </div>
+
+                <!-- ADMIN TAB 1: PRODUCTS (STRICTLY NO PRICE INPUTS) -->
+                <div id="adminTabProducts" class="space-y-6">
+                    <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200">
+                        <h4 class="font-bold text-slate-900 text-base mb-4"><i class="fa-solid fa-plus-circle text-brand-600 mr-2"></i> Add New Product / Consumable</h4>
+                        <form onsubmit="handleAddProduct(event)" class="space-y-4">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-xs font-bold text-slate-700 mb-1">Product Name *</label>
+                                    <input type="text" id="adminProdName" required placeholder="e.g. HP 85A Black LaserJet Toner" class="w-full px-3 py-2 bg-white border border-slate-300 rounded-xl text-xs">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-bold text-slate-700 mb-1">Category *</label>
+                                    <select id="adminProdCategory" required class="w-full px-3 py-2 bg-white border border-slate-300 rounded-xl text-xs">
+                                        <option value="Toners">Toners</option>
+                                        <option value="Drums">Drums</option>
+                                        <option value="Blades">Blades</option>
+                                        <option value="Printer Consumables">Printer Consumables</option>
+                                        <option value="Photocopier Consumables">Photocopier Consumables</option>
+                                        <option value="Compatible Parts">Compatible Parts</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-xs font-bold text-slate-700 mb-1">Compatibility Information</label>
+                                    <input type="text" id="adminProdCompat" placeholder="e.g. HP LaserJet P1102 / P1102w / M1212nf" class="w-full px-3 py-2 bg-white border border-slate-300 rounded-xl text-xs">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-bold text-slate-700 mb-1">Product Image URL (or upload below)</label>
+                                    <input type="text" id="adminProdImage" placeholder="https://..." class="w-full px-3 py-2 bg-white border border-slate-300 rounded-xl text-xs">
+                                </div>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 mb-1">Short Description *</label>
+                                <textarea id="adminProdDesc" required rows="2" placeholder="High yield dark print performance..." class="w-full px-3 py-2 bg-white border border-slate-300 rounded-xl text-xs"></textarea>
+                            </div>
+                            <button type="submit" class="bg-brand-600 hover:bg-brand-700 text-white font-bold px-5 py-2.5 rounded-xl text-xs transition">
+                                Save Product
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- Current Products List -->
+                    <div>
+                        <h4 class="font-bold text-slate-900 text-sm mb-3">Existing Inventory List</h4>
+                        <div id="adminProductsList" class="space-y-2"></div>
+                    </div>
+                </div>
+
+                <!-- ADMIN TAB 2: GALLERY -->
+                <div id="adminTabGallery" class="hidden space-y-6">
+                    <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200">
+                        <h4 class="font-bold text-slate-900 text-base mb-4"><i class="fa-solid fa-plus-circle text-brand-600 mr-2"></i> Add Gallery Item</h4>
+                        <form onsubmit="handleAddGalleryItem(event)" class="space-y-4">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-xs font-bold text-slate-700 mb-1">Job Title *</label>
+                                    <input type="text" id="adminGalTitle" required placeholder="e.g. Canon Copier Fuser Replacement" class="w-full px-3 py-2 bg-white border border-slate-300 rounded-xl text-xs">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-bold text-slate-700 mb-1">Category *</label>
+                                    <select id="adminGalCategory" required class="w-full px-3 py-2 bg-white border border-slate-300 rounded-xl text-xs">
+                                        <option value="Printer Repairs">Printer Repairs</option>
+                                        <option value="Photocopier Service">Photocopier Service</option>
+                                        <option value="D.I. Machines">D.I. Machines</option>
+                                        <option value="Computer Setup">Computer Setup</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-xs font-bold text-slate-700 mb-1">Equipment Type & Model</label>
+                                    <input type="text" id="adminGalEquip" placeholder="e.g. Canon IR2520 Copier" class="w-full px-3 py-2 bg-white border border-slate-300 rounded-xl text-xs">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-bold text-slate-700 mb-1">Image URL</label>
+                                    <input type="text" id="adminGalImage" placeholder="https://..." class="w-full px-3 py-2 bg-white border border-slate-300 rounded-xl text-xs">
+                                </div>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 mb-1">Short Description</label>
+                                <textarea id="adminGalDesc" rows="2" placeholder="Replaced worn fuser film and roller..." class="w-full px-3 py-2 bg-white border border-slate-300 rounded-xl text-xs"></textarea>
+                            </div>
+                            <button type="submit" class="bg-brand-600 hover:bg-brand-700 text-white font-bold px-5 py-2.5 rounded-xl text-xs transition">
+                                Add To Work Gallery
+                            </button>
+                        </form>
+                    </div>
+
+                    <div id="adminGalleryList" class="grid grid-cols-1 sm:grid-cols-2 gap-4"></div>
+                </div>
+
+                <!-- ADMIN TAB 3: ENQUIRIES LOG -->
+                <div id="adminTabEnquiries" class="hidden space-y-4">
+                    <div class="flex items-center justify-between">
+                        <h4 class="font-bold text-slate-900 text-sm">Customer Form Submissions</h4>
+                        <button onclick="clearEnquiriesLog()" class="text-xs text-red-600 font-semibold hover:underline">Clear Log</button>
+                    </div>
+                    <div id="adminEnquiriesLog" class="space-y-3"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        // INITIAL DEFAULT DATA (STRICTLY NO PRICES)
+        const defaultProducts = [
+            {
+                id: 1,
+                name: "HP 85A Black LaserJet Toner (CE285A)",
+                category: "Toners",
+                description: "Premium high-density black toner cartridge providing crisp text and line clarity for high volume printing.",
+                compatibility: "HP LaserJet Pro P1102, P1102w, M1212nf, M1217nfw",
+                image: "https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?auto=format&fit=crop&w=600&q=80"
+            },
+            {
+                id: 2,
+                name: "Canon NPG-51 Copier Toner Cartridge",
+                category: "Photocopier Consumables",
+                description: "Heavy-duty toner designed specifically for high speed Canon ImageRUNNER machines with zero smudging.",
+                compatibility: "Canon IR2520, IR2525, IR2530 series",
+                image: "https://images.unsplash.com/photo-1589829085413-56de8ae18c73?auto=format&fit=crop&w=600&q=80"
+            },
+            {
+                id: 3,
+                name: "HP 12A OPC Drum Unit",
+                category: "Drums",
+                description: "Long-life optical photoconductor drum ensuring uniform static charge and ghost-free print copy outputs.",
+                compatibility: "HP LaserJet 1010, 1020, 3050, 1018",
+                image: "https://images.unsplash.com/photo-1588702547919-26089e690ecd?auto=format&fit=crop&w=600&q=80"
+            },
+            {
+                id: 4,
+                name: "Universal Photocopier Wiper Blade",
+                category: "Blades",
+                description: "Precision rubber doctor/wiper blade to keep photoconductor drum surfaces free from excess toner residue.",
+                compatibility: "Ricoh, Canon, and Konica Minolta office copiers",
+                image: "https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=80"
+            },
+            {
+                id: 5,
+                name: "HP 26A Black Toner Cartridge (CF226A)",
+                category: "Toners",
+                description: "High capacity toner tailored for corporate office laser printers with fast drying formulation.",
+                compatibility: "HP LaserJet Pro M402d, M402dn, M426fdw",
+                image: "https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?auto=format&fit=crop&w=600&q=80"
+            },
+            {
+                id: 6,
+                name: "Compatible Fuser Pressure Roller",
+                category: "Compatible Parts",
+                description: "High temperature resistant pressure roller to prevent paper wrinkling and fuser wrapping errors.",
+                compatibility: "Canon & HP Workgroup Printers",
+                image: "https://images.unsplash.com/photo-1581092335397-9583fe92d232?auto=format&fit=crop&w=600&q=80"
+            }
+        ];
+
+        const defaultGallery = [
+            {
+                id: 1,
+                title: "Complete Photocopier Drum & Fuser Overhaul",
+                category: "Photocopier Service",
+                equipment: "Canon ImageRUNNER 2525",
+                date: "Recent Job",
+                description: "Replaced degraded photoconductor drum unit, wiper blades, and upper fuser roller. Restored clear print quality.",
+                image: "https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80"
+            },
+            {
+                id: 2,
+                title: "Heavy-Duty Laser Printer Gear & Motor Repair",
+                category: "Printer Repairs",
+                equipment: "HP LaserJet Enterprise M605",
+                date: "Recent Job",
+                description: "Diagnosed paper jamming error and grinding noise. Replaced main drive gear cluster and pickup rollers.",
+                image: "https://images.unsplash.com/photo-1581092335397-9583fe92d232?auto=format&fit=crop&w=800&q=80"
+            },
+            {
+                id: 3,
+                title: "D.I. Digital Machine Calibration & Maintenance",
+                category: "D.I. Machines",
+                equipment: "Direct Imaging Press Unit",
+                date: "Recent Job",
+                description: "Routine servicing, sensor cleaning, optical laser head realignment, and pressure roller tuning.",
+                image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&q=80"
+            },
+            {
+                id: 4,
+                title: "Corporate Workstation & Network Printer Setup",
+                category: "Computer Setup",
+                equipment: "Dell Desktop Workstations + Network HP Printers",
+                date: "Recent Job",
+                description: "Full OS setup, driver installation, IP network printer mapping across 8 staff computers in an office.",
+                image: "https://images.unsplash.com/photo-1588702547919-26089e690ecd?auto=format&fit=crop&w=800&q=80"
+            }
+        ];
+
+        // STATE INITIALIZATION FROM LOCAL STORAGE OR DEFAULTS
+        let products = JSON.parse(localStorage.getItem('printcare_products')) || defaultProducts;
+        let gallery = JSON.parse(localStorage.getItem('printcare_gallery')) || defaultGallery;
+        let enquiries = JSON.parse(localStorage.getItem('printcare_enquiries')) || [];
+
+        let activeCategory = 'all';
+        let currentWhatsAppMessage = '';
+        let currentWhatsAppContext = '';
+
+        // DOM LOAD INITIALIZATION
+        window.onload = function() {
+            renderProducts();
+            renderGallery();
+        };
+
+        // MOBILE MENU TOGGLE
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        }
+
+        // PRODUCTS RENDER & FILTER (NO PRICES SHOWN)
+        function renderProducts() {
+            const grid = document.getElementById('productGrid');
+            const noMsg = document.getElementById('noProductsMsg');
+            const searchTerm = document.getElementById('productSearchInput').value.toLowerCase();
+
+            grid.innerHTML = '';
+            let count = 0;
+
+            products.forEach(p => {
+                const matchesCat = (activeCategory === 'all' || p.category === activeCategory);
+                const matchesSearch = p.name.toLowerCase().includes(searchTerm) || 
+                                      p.description.toLowerCase().includes(searchTerm) || 
+                                      p.category.toLowerCase().includes(searchTerm) ||
+                                      (p.compatibility && p.compatibility.toLowerCase().includes(searchTerm));
+
+                if (matchesCat && matchesSearch) {
+                    count++;
+                    const card = document.createElement('div');
+                    card.className = "bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-xl transition duration-300 flex flex-col justify-between";
+                    
+                    card.innerHTML = `
+                        <div>
+                            <div class="h-48 bg-slate-100 overflow-hidden relative">
+                                <img src="${p.image}" alt="${p.name}" class="w-full h-full object-cover hover:scale-105 transition duration-500" onerror="this.src='https://placehold.co/600x400/0f172a/ffffff?text=PRINTCARE+Product'">
+                                <span class="absolute top-3 left-3 bg-slate-900/80 backdrop-blur-md text-white text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-md">
+                                    ${p.category}
+                                </span>
+                            </div>
+                            <div class="p-5 space-y-3">
+                                <h3 class="font-extrabold text-slate-900 text-base leading-snug">${p.name}</h3>
+                                <p class="text-xs text-slate-600 leading-relaxed line-clamp-2">${p.description}</p>
+                                ${p.compatibility ? `
+                                    <div class="bg-slate-50 p-2.5 rounded-xl border border-slate-100 text-[11px] text-slate-700">
+                                        <span class="font-bold text-slate-900 block mb-0.5"><i class="fa-solid fa-puzzle-piece text-brand-600 mr-1"></i> Compatibility:</span>
+                                        ${p.compatibility}
+                                    </div>
+                                ` : ''}
+                            </div>
+                        </div>
+                        <div class="p-5 pt-0 space-y-2">
+                            <button onclick="openWhatsAppModal('Order ${p.name}', 'Hello PRINTCARE SOLUTIONS, I would like to order/inquire about ${p.name}. Please provide availability and details.')" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-2.5 rounded-xl text-xs transition flex items-center justify-center gap-2">
+                                <i class="fa-brands fa-whatsapp text-sm"></i> Order on WhatsApp
+                            </button>
+                            <button onclick="openWhatsAppModal('Inquiry ${p.name}', 'Hello PRINTCARE SOLUTIONS, I am interested in ${p.name}. Please send details regarding availability.')" class="w-full bg-slate-100 hover:bg-slate-200 text-slate-800 font-semibold py-2 rounded-xl text-xs transition">
+                                Ask About This Product
+                            </button>
+                        </div>
+                    `;
+                    grid.appendChild(card);
+                }
+            });
+
+            if (count === 0) {
+                noMsg.classList.remove('hidden');
+            } else {
+                noMsg.classList.add('hidden');
+            }
+        }
+
+        function setCategoryFilter(cat) {
+            activeCategory = cat;
+            document.querySelectorAll('.cat-btn').forEach(btn => {
+                if (btn.getAttribute('data-cat') === cat) {
+                    btn.className = "cat-btn active px-4 py-2 bg-brand-600 text-white rounded-xl text-xs font-bold whitespace-nowrap transition";
+                } else {
+                    btn.className = "cat-btn px-4 py-2 bg-slate-100 text-slate-700 hover:bg-slate-200 rounded-xl text-xs font-bold whitespace-nowrap transition";
+                }
+            });
+            renderProducts();
+        }
+
+        function filterProducts() {
+            renderProducts();
+        }
+
+        // GALLERY RENDER & FILTER
+        function renderGallery(cat = 'all') {
+            const grid = document.getElementById('galleryGrid');
+            grid.innerHTML = '';
+
+            gallery.forEach(item => {
+                if (cat === 'all' || item.category === cat) {
+                    const card = document.createElement('div');
+                    card.className = "bg-slate-800 rounded-2xl overflow-hidden border border-slate-700 hover:border-brand-500 transition cursor-pointer group";
+                    card.onclick = () => openGalleryModal(item);
+
+                    card.innerHTML = `
+                        <div class="h-48 overflow-hidden relative">
+                            <img src="${item.image}" alt="${item.title}" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" onerror="this.src='https://placehold.co/600x400/1e293b/ffffff?text=PRINTCARE+Work'">
+                            <span class="absolute top-3 left-3 bg-brand-600 text-white text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-md">
+                                ${item.category}
+                            </span>
+                        </div>
+                        <div class="p-5 space-y-2">
+                            <h4 class="font-bold text-white text-base group-hover:text-brand-400 transition">${item.title}</h4>
+                            <p class="text-xs text-brand-300 font-medium"><i class="fa-solid fa-microchip mr-1"></i> ${item.equipment}</p>
+                            <p class="text-xs text-slate-400 line-clamp-2">${item.description}</p>
+                        </div>
+                    `;
+                    grid.appendChild(card);
+                }
+            });
+        }
+
+        function filterGallery(cat) {
+            document.querySelectorAll('.gallery-cat-btn').forEach(btn => {
+                if (btn.getAttribute('data-gcat') === cat) {
+                    btn.className = "gallery-cat-btn px-4 py-2 bg-brand-600 text-white rounded-full text-xs font-bold transition";
+                } else {
+                    btn.className = "gallery-cat-btn px-4 py-2 bg-slate-800 text-slate-300 hover:bg-slate-700 rounded-full text-xs font-bold transition";
+                }
+            });
+            renderGallery(cat);
+        }
+
+        // GALLERY LIGHTBOX MODAL
+        function openGalleryModal(item) {
+            document.getElementById('lightboxImg').src = item.image;
+            document.getElementById('lightboxCategory').innerText = item.category;
+            document.getElementById('lightboxDate').innerText = item.date || 'Verified Repair';
+            document.getElementById('lightboxTitle').innerText = item.title;
+            document.getElementById('lightboxEquip').innerText = "Equipment: " + item.equipment;
+            document.getElementById('lightboxDesc').innerText = item.description;
+
+            document.getElementById('galleryModal').classList.remove('hidden');
+        }
+
+        function closeGalleryModal() {
+            document.getElementById('galleryModal').classList.add('hidden');
+        }
+
+        // DUAL WHATSAPP MODAL LOGIC
+        function openWhatsAppModal(context, messageText) {
+            currentWhatsAppContext = context;
+            currentWhatsAppMessage = messageText;
+
+            document.getElementById('waModalTitle').innerText = "Contact for " + context;
+            document.getElementById('waModalMessagePreview').innerText = `"${messageText}"`;
+            document.getElementById('whatsappModal').classList.remove('hidden');
+        }
+
+        function closeWhatsAppModal() {
+            document.getElementById('whatsappModal').classList.add('hidden');
+        }
+
+        function sendToWhatsApp(phoneNumber) {
+            const encoded = encodeURIComponent(currentWhatsAppMessage);
+            const url = `https://wa.me/234${phoneNumber.substring(1)}?text=${encoded}`;
+            window.open(url, '_blank');
+            closeWhatsAppModal();
+        }
+
+        // ENQUIRY FORM SUBMISSION
+        function handleFormSubmit(e) {
+            e.preventDefault();
+
+            const newEnquiry = {
+                id: Date.now(),
+                date: new Date().toLocaleDateString(),
+                name: document.getElementById('formName').value,
+                phone: document.getElementById('formPhone').value,
+                email: document.getElementById('formEmail').value || 'N/A',
+                service: document.getElementById('formService').value,
+                equipType: document.getElementById('formEquipType').value || 'N/A',
+                equipModel: document.getElementById('formEquipModel').value || 'N/A',
+                productReq: document.getElementById('formProductReq').value || 'N/A',
+                problem: document.getElementById('formProblem').value,
+                contactPref: document.getElementById('formContactPref').value
+            };
+
+            enquiries.unshift(newEnquiry);
+            localStorage.setItem('printcare_enquiries', JSON.stringify(enquiries));
+
+            // Pre-fill WhatsApp message for easy direct sending
+            const waMsg = `Hello PRINTCARE SOLUTIONS, I submitted an enquiry on your website.\n*Name:* ${newEnquiry.name}\n*Service:* ${newEnquiry.service}\n*Equipment:* ${newEnquiry.equipType} (${newEnquiry.equipModel})\n*Details:* ${newEnquiry.problem}`;
+            
+            document.getElementById('enquiryForm').reset();
+            openWhatsAppModal('Enquiry Confirmation', waMsg);
+        }
+
+        // ADMIN MODAL & AUTHENTICATION
+        function openAdminModal() {
+            document.getElementById('adminModal').classList.remove('hidden');
+        }
+
+        function closeAdminModal() {
+            document.getElementById('adminModal').classList.add('hidden');
+        }
+
+        function verifyAdminPassword() {
+            const pass = document.getElementById('adminPasswordInput').value;
+            if (pass === 'printcare123') {
+                document.getElementById('adminAuthSection').classList.add('hidden');
+                document.getElementById('adminPanelContent').classList.remove('hidden');
+                renderAdminProducts();
+                renderAdminGallery();
+                renderAdminEnquiries();
+            } else {
+                alert('Incorrect admin password!');
+            }
+        }
+
+        function logoutAdmin() {
+            document.getElementById('adminAuthSection').classList.remove('hidden');
+            document.getElementById('adminPanelContent').classList.add('hidden');
+            document.getElementById('adminPasswordInput').value = '';
+        }
+
+        function switchAdminTab(tabName) {
+            document.querySelectorAll('.admin-tab').forEach(btn => {
+                if (btn.getAttribute('data-tab') === tabName) {
+                    btn.className = "admin-tab active px-4 py-2 bg-brand-600 text-white rounded-xl text-xs font-bold";
+                } else {
+                    btn.className = "admin-tab px-4 py-2 bg-slate-100 text-slate-700 rounded-xl text-xs font-bold";
+                }
+            });
+
+            document.getElementById('adminTabProducts').classList.add('hidden');
+            document.getElementById('adminTabGallery').classList.add('hidden');
+            document.getElementById('adminTabEnquiries').classList.add('hidden');
+
+            if (tabName === 'products') document.getElementById('adminTabProducts').classList.remove('hidden');
+            if (tabName === 'gallery') document.getElementById('adminTabGallery').classList.remove('hidden');
+            if (tabName === 'enquiries') document.getElementById('adminTabEnquiries').classList.remove('hidden');
+        }
+
+        // ADMIN PRODUCT MANAGEMENT (NO PRICE FIELD)
+        function handleAddProduct(e) {
+            e.preventDefault();
+            const newProd = {
+                id: Date.now(),
+                name: document.getElementById('adminProdName').value,
+                category: document.getElementById('adminProdCategory').value,
+                compatibility: document.getElementById('adminProdCompat').value || 'Standard Compatibility',
+                image: document.getElementById('adminProdImage').value || 'https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?auto=format&fit=crop&w=600&q=80',
+                description: document.getElementById('adminProdDesc').value
+            };
+
+            products.unshift(newProd);
+            localStorage.setItem('printcare_products', JSON.stringify(products));
+            
+            e.target.reset();
+            renderProducts();
+            renderAdminProducts();
+            alert('Product added successfully (without price display)!');
+        }
+
+        function deleteProduct(id) {
+            if (confirm('Are you sure you want to delete this product?')) {
+                products = products.filter(p => p.id !== id);
+                localStorage.setItem('printcare_products', JSON.stringify(products));
+                renderProducts();
+                renderAdminProducts();
+            }
+        }
+
+        function renderAdminProducts() {
+            const list = document.getElementById('adminProductsList');
+            list.innerHTML = '';
+
+            products.forEach(p => {
+                const row = document.createElement('div');
+                row.className = "bg-slate-50 p-3 rounded-xl border border-slate-200 flex items-center justify-between text-xs";
+                row.innerHTML = `
+                    <div class="flex items-center gap-3">
+                        <img src="${p.image}" class="w-10 h-10 object-cover rounded-lg">
+                        <div>
+                            <div class="font-bold text-slate-900">${p.name}</div>
+                            <div class="text-[10px] text-slate-500">${p.category}</div>
+                        </div>
+                    </div>
+                    <button onclick="deleteProduct(${p.id})" class="text-red-600 hover:text-red-800 font-bold px-2 py-1 bg-red-50 rounded">
+                        Delete
+                    </button>
+                `;
+                list.appendChild(row);
+            });
+        }
+
+        // ADMIN GALLERY MANAGEMENT
+        function handleAddGalleryItem(e) {
+            e.preventDefault();
+            const newGal = {
+                id: Date.now(),
+                title: document.getElementById('adminGalTitle').value,
+                category: document.getElementById('adminGalCategory').value,
+                equipment: document.getElementById('adminGalEquip').value || 'Office Equipment',
+                date: new Date().toLocaleDateString(),
+                image: document.getElementById('adminGalImage').value || 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80',
+                description: document.getElementById('adminGalDesc').value || 'Professional repair completed.'
+            };
+
+            gallery.unshift(newGal);
+            localStorage.setItem('printcare_gallery', JSON.stringify(gallery));
+
+            e.target.reset();
+            renderGallery();
+            renderAdminGallery();
+            alert('Gallery item added!');
+        }
+
+        function deleteGalleryItem(id) {
+            if (confirm('Delete this gallery item?')) {
+                gallery = gallery.filter(g => g.id !== id);
+                localStorage.setItem('printcare_gallery', JSON.stringify(gallery));
+                renderGallery();
+                renderAdminGallery();
+            }
+        }
+
+        function renderAdminGallery() {
+            const list = document.getElementById('adminGalleryList');
+            list.innerHTML = '';
+
+            gallery.forEach(g => {
+                const item = document.createElement('div');
+                item.className = "bg-slate-50 p-3 rounded-xl border border-slate-200 flex items-center justify-between text-xs";
+                item.innerHTML = `
+                    <div>
+                        <div class="font-bold text-slate-900">${g.title}</div>
+                        <div class="text-[10px] text-slate-500">${g.category} - ${g.equipment}</div>
+                    </div>
+                    <button onclick="deleteGalleryItem(${g.id})" class="text-red-600 font-bold px-2 py-1 bg-red-50 rounded">
+                        Delete
+                    </button>
+                `;
+                list.appendChild(item);
+            });
+        }
+
+        // ADMIN ENQUIRIES MANAGEMENT
+        function renderAdminEnquiries() {
+            const log = document.getElementById('adminEnquiriesLog');
+            log.innerHTML = '';
+
+            if (enquiries.length === 0) {
+                log.innerHTML = '<p class="text-xs text-slate-400 italic">No customer enquiries submitted yet.</p>';
+                return;
+            }
+
+            enquiries.forEach(e => {
+                const item = document.createElement('div');
+                item.className = "bg-slate-50 p-4 rounded-xl border border-slate-200 text-xs space-y-1.5";
+                item.innerHTML = `
+                    <div class="flex items-center justify-between font-bold text-slate-900">
+                        <span>${e.name} (${e.phone})</span>
+                        <span class="text-[10px] text-slate-400">${e.date}</span>
+                    </div>
+                    <div class="text-brand-700 font-semibold">Service: ${e.service}</div>
+                    <div class="text-slate-600">Equipment: ${e.equipType} ${e.equipModel !== 'N/A' ? '| ' + e.equipModel : ''}</div>
+                    ${e.productReq !== 'N/A' ? `<div class="text-slate-600">Product Req: ${e.productReq}</div>` : ''}
+                    <div class="bg-white p-2 rounded border border-slate-200 text-slate-700 font-mono mt-1">${e.problem}</div>
+                `;
+                log.appendChild(item);
+            });
+        }
+
+        function clearEnquiriesLog() {
+            if (confirm('Clear all recorded customer enquiries?')) {
+                enquiries = [];
+                localStorage.removeItem('printcare_enquiries');
+                renderAdminEnquiries();
+            }
+        }
+    </script>
+</body>
+</html>
